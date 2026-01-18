@@ -14,13 +14,23 @@
 ## Agent Space Introduction
 Agent Space is an open-source framework that automatically selects the appropriate agent based on task requirements, executes the task, evaluates the results, and returns the result.
 
-## 4AI Agent Space Framwork
+## 4AI Agent Space Framework
 
 ![Alt text](https://github.com/soonchain/4AI-Agent-Space/blob/main/img/Agent_Space.png)
 
 ## Component
 ### 🔥 Pioneer  
 This is the starting point that initiates the task with tags and a specific task. It sends the task with tags { tag: 1+4, task }.
+
+### Agent Space Execution Flow
+The Agent Space framework follows a structured multi-agent execution flow
+to ensure tasks are routed and evaluated efficiently.
+
+1. Pioneer submits a task with capability tags.
+2. Root Agent analyzes task requirements.
+3. Suitable agents are selected from the Agent Cluster.
+4. Agents execute the task independently or collaboratively.
+5. Root Agent evaluates outputs and returns the final result.
 
 ### 🚀 Root Agent
 Master Agent selects the suitable agents from the Agent Cluster based on the task's needs. And evaluates the outputs to determine the final result.
@@ -31,6 +41,15 @@ Cluster: The "Agent Cluster" contains multiple agents (labeled A, B, C, D, E, et
 ## How To Start
 ### 📝 Agent Registration
 The content of the [tag](https://github.com/soonchain/4AI-Agent-Space/edit/main/README.md) field is manually entered. Before registration, you should carefully consider the functionality of the agent. If the tag entered does not support the corresponding function or performs poorly, it will affect the agent's rating.  
+
+#### Tag Semantics
+Tags represent an agent’s functional capabilities and are used by the Root Agent
+for task routing and evaluation.
+
+- Single tags indicate focused capabilities.
+- Combined tags (e.g. 1+4) indicate multi-capability agents.
+- Incorrect or misleading tags may negatively affect agent evaluation and rating.
+
 ```
 # agent_1 
 {
@@ -49,3 +68,4 @@ Thank you for your interest in contributing! If you would like to contribute, pl
 
 ## Thank You!
 Thank you for contributing to this project! We look forward to your ideas and improvements.
+
